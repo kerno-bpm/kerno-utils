@@ -7,13 +7,13 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Base64;
+import java.util.logging.Logger;
 
 @Slf4j
 public abstract class EncryptService {
     private static final String ALGORITHM = "SHA-512";
     private static final int ITERATIONS = 64000;
     private static final int SALT_SIZE = 64;
-
 
     public static String encryptPassword(String password) {
         byte[] salt = generateSalt();
@@ -35,7 +35,7 @@ public abstract class EncryptService {
             }
 
         } catch (NoSuchAlgorithmException ex) {
-            log.error(ex.getMessage(), ex);
+            log.error(ex.getMessage());
         }
         return hash;
     }
