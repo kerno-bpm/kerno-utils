@@ -1,9 +1,6 @@
 sudo: false
 language: java
-env:
-  global:
-    - CODECOV_TOKEN=45b6720d-2189-4f19-9e7b-22681ae183af
-before_script:
-  - pip install --user codecov
+jdk:
+  - oraclejdk8
 after_success:
   - bash <(curl -s https://codecov.io/bash)

@@ -1,12 +1,12 @@
 plugins {
     id 'maven-publish'
     id 'java'
+    id 'jacoco'
 }
 
-apply plugin: 'jacoco'
 
 jacoco {
-    toolVersion = '0.8.1'
+    toolVersion = "0.8.2"
 }
 
 group 'com.kerno'
@@ -53,26 +53,16 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
-
 test {
-    dependsOn 'cleanTest'
-    useJUnitPlatform()
     jacoco {
-        excludes += [
-                '**/**/domain/**'
-        ]
-    }
+        append = false
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec") }
 }
 jacocoTestReport {
     reports {
-        xml.enabled = true
-        html.enabled = true
-    }
-    afterEvaluate {
-        classDirectories = files(classDirectories.files.collect {
-            fileTree(dir: it, exclude: ['**/**/domain/**'])
-        })
+        xml.enabled true
+        html.enabled true
+        csv.enabled true
     }
 }
-
 check.dependsOn jacocoTestReport
