@@ -8,7 +8,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import java.util.UUID;
 
-//@Data
+@Data
 @MappedSuperclass
 @ToString(callSuper = true)
 public abstract class AbstractExternalIdentifiableEntity extends AbstractEntity {

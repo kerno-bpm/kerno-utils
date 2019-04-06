@@ -46,9 +46,9 @@ publishing {
 }
 
 dependencies {
-    implementation "org.hibernate:hibernate-core:${hibernateJpaVersion}"
-    implementation "org.hibernate:hibernate-envers:3.6.4.Final"
-    implementation "org.projectlombok:lombok:${lombokVersion}"
+    compileOnly "org.hibernate:hibernate-core:${hibernateJpaVersion}"
+    compileOnly "org.hibernate:hibernate-envers:3.6.4.Final"
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testImplementation('org.junit.jupiter:junit-jupiter-api:5.2.0')
     testCompile('org.junit.jupiter:junit-jupiter-params:5.2.0')
