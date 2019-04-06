@@ -1,16 +1,44 @@
 plugins {
+    id 'maven-publish'
     id 'java'
 }
 
-group 'kerno.com'
+group 'com.kerno'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
+ext {
+    set('hibernateJpaVersion', '5.4.2.Final')
+    set('lombokVersion', '1.18.6')
+}
 repositories {
     mavenCentral()
 }
+publishing {
+    publications {
+        maven(MavenPublication) {
+            pom {
+                groupId = 'com.kerno'
+                artifactId = 'kerno-utils'
+                version = '1.0-SNAPSHOT'
+                from components.java
+                developers {
+                    developer {
+                        id = 'jmallas'
+                        name = 'Jorge Luis Malla Sanchez'
+                        email = 'jomasloja@gmail.com'
+                    }
+                }
+            }
+        }
+    }
+}
 
 dependencies {
+    implementation "org.hibernate:hibernate-core:${hibernateJpaVersion}"
+    implementation "org.hibernate:hibernate-envers:3.6.4.Final"
+    implementation "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
