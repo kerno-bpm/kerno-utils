@@ -3,6 +3,12 @@ plugins {
     id 'java'
 }
 
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = '0.8.1'
+}
+
 group 'com.kerno'
 version '1.0-SNAPSHOT'
 
@@ -47,3 +53,26 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+test {
+    dependsOn 'cleanTest'
+    useJUnitPlatform()
+    jacoco {
+        excludes += [
+                '**/**/domain/**'
+        ]
+    }
+}
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+    afterEvaluate {
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ['**/**/domain/**'])
+        })
+    }
+}
+
+check.dependsOn jacocoTestReport

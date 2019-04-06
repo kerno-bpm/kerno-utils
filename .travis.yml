@@ -1,7 +1,9 @@
-sudo: required
+sudo: false
 language: java
-jdk:
-  - oraclejdk8
-
+env:
+  global:
+    - CODECOV_TOKEN=45b6720d-2189-4f19-9e7b-22681ae183af
+before_script:
+  - pip install --user codecov
 after_success:
   - bash <(curl -s https://codecov.io/bash)
