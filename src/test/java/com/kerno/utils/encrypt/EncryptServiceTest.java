@@ -1,13 +1,14 @@
 package com.kerno.utils.encrypt;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.junit.Assert.assertEquals;
 
+@ExtendWith(MockitoExtension.class)
 public class EncryptServiceTest {
-    @Test
-    public void testGetMessage() {
-        assertEquals("Hello World!", "Hello World!");
-    }
 
+    @Test
+    public void verifyPassword() {
+    }
 }
