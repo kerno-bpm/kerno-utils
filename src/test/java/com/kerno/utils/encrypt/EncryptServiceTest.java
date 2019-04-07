@@ -10,6 +10,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Base64;
 
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+
 
 @ExtendWith(MockitoExtension.class)
 public class EncryptServiceTest {
@@ -48,5 +51,12 @@ public class EncryptServiceTest {
         Boolean isCorrect = encryptService.verifyPassword(PASSWORD_TEXTPLAIN, hash, salt);
 
         Assertions.assertTrue(isCorrect);
+    }
+
+    @Test
+    public void isPasswordCorrectTest() {
+        Boolean isCorrect = encryptService.isPasswordCorrect(ENCRYPTED_TESTING_PWD, "jmallas123");
+        Assertions.assertTrue(isCorrect);
+        verify(encryptService, times(1)).verifyPassword(Mockito.anyString(), Mockito.any(), Mockito.any());
     }
 }
