@@ -1,6 +1,6 @@
 package com.kerno.utils.encrypt;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.Data;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -9,19 +9,20 @@ import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.logging.Logger;
 
-@Slf4j
-public abstract class EncryptService {
-    private static final String ALGORITHM = "SHA-512";
-    private static final int ITERATIONS = 64000;
-    private static final int SALT_SIZE = 64;
+@Data
+public class EncryptService {
+    public String ALGORITHM = "SHA-512";
+    public int ITERATIONS = 64000;
+    public int SALT_SIZE = 64;
+    private final static Logger LOGGER = Logger.getLogger("EncryptService");
 
-    public static String encryptPassword(String password) {
+    public String encryptPassword(String password) {
         byte[] salt = generateSalt();
         byte[] hash = calculateHash(password, salt);
         return Base64.getEncoder().encodeToString(salt).concat(":").concat(Base64.getEncoder().encodeToString(hash));
     }
 
-    public static byte[] calculateHash(String password, byte[] salt) {
+    protected byte[] calculateHash(String password, byte[] salt) {
         byte[] hash = new byte[64];
         try {
             MessageDigest md = MessageDigest.getInstance(ALGORITHM);
@@ -35,24 +36,24 @@ public abstract class EncryptService {
             }
 
         } catch (NoSuchAlgorithmException ex) {
-            log.error(ex.getMessage());
+            LOGGER.info(ex.getMessage());
         }
         return hash;
     }
 
-    public static byte[] generateSalt() {
+    protected byte[] generateSalt() {
         SecureRandom random = new SecureRandom();
         byte[] salt = new byte[SALT_SIZE];
         random.nextBytes(salt);
         return salt;
     }
 
-    public static boolean verifyPassword(String password, byte[] originalHash, byte[] salt) {
+    public boolean verifyPassword(String password, byte[] originalHash, byte[] salt) {
         byte[] comparisonHash = calculateHash(password, salt);
         return comparePasswords(originalHash, comparisonHash);
     }
 
-    public static boolean comparePasswords(byte[] originalHash, byte[] comparisonHash) {
+    public boolean comparePasswords(byte[] originalHash, byte[] comparisonHash) {
         int diff = originalHash.length ^ comparisonHash.length;
         for (int i = 0; i < originalHash.length && i < comparisonHash.length; i++) {
             diff |= originalHash[i] ^ comparisonHash[i];
