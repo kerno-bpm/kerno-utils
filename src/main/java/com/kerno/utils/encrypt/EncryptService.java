@@ -60,4 +60,12 @@ public class EncryptService {
         }
         return diff == 0;
     }
+
+    public boolean isPasswordCorrect(String oldPassword, String passwordUpdate) {
+        String saltPart = oldPassword.split(":")[0];
+        String hashPart = oldPassword.split(":")[1];
+        byte[] salt = Base64.getDecoder().decode(saltPart);
+        byte[] hash = Base64.getDecoder().decode(hashPart);
+        return this.verifyPassword(passwordUpdate, hash, salt);
+    }
 }
