@@ -4,7 +4,6 @@ plugins {
     id 'jacoco'
 }
 
-
 jacoco {
     toolVersion = "0.8.2"
 }
@@ -77,12 +76,3 @@ jacocoTestReport {
     }
 }
 check.dependsOn jacocoTestReport
-task buildZip(type: Zip) {
-    from compileJava
-    from processResources
-    into('lib') {
-        from configurations.runtime
-    }
-}
-
-build.dependsOn buildZip
