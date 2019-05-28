@@ -3,23 +3,16 @@ package com.kerno.utils.jwt;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Data
-@RequiredArgsConstructor
 @Slf4j
 public class KernoServiceJwtConfig {
-    private JwtConfig jwtConfig;
-    private String bearerAuth;
 
-
-    public UserDetailsJwt getUserDetails(String token, String key) {
+    public static UserDetailsJwt getUserDetails(String token, String key) {
         Claims claims = Jwts.parser()
                 .setSigningKey(key.getBytes())
                 .parseClaimsJws(token)
@@ -30,7 +23,7 @@ public class KernoServiceJwtConfig {
         return userDetails;
     }
 
-    public String createJwtToken(UserDetailsJwt user) {
+    public static String createJwtToken(UserDetailsJwt user, JwtConfig jwtConfig) {
         if (user.getUsername() == null) {
             log.error("the user not exists {}", user.getUsername());
             return null;

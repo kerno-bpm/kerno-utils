@@ -7,21 +7,22 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-class ValidatorServiceTest {
+public class ValidatorServiceTest {
+
     @InjectMocks
-    protected ValidatorService validatorService;
+    private ValidatorService validatorService;
 
     @Test
     public void isPasswordValidTest() {
         String password = "Kerno12345678";
-        Boolean isvalid = validatorService.isValidPassword(password);
-        Assertions.assertTrue(isvalid);
+        Boolean isValid = validatorService.isValidPassword(password);
+        Assertions.assertTrue(isValid);
     }
 
     @Test
     public void isEmailValidTest() {
         String email = "kernobpm@gmail.com";
-        Boolean isvalid = validatorService.isEmailValid(email);
-        Assertions.assertTrue(isvalid);
+        Boolean isValid = validatorService.isEmailValid(email);
+        Assertions.assertTrue(isValid);
     }
 }

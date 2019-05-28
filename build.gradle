@@ -1,5 +1,4 @@
 plugins {
-    id 'maven-publish'
     id 'java'
     id 'jacoco'
 }
@@ -20,28 +19,7 @@ ext {
 }
 allprojects {
     repositories {
-        mavenCentral()
         maven { url "http://repo1.maven.org/maven2/" }
-    }
-}
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            pom {
-                groupId = 'com.kerno'
-                artifactId = 'kerno-utils'
-                version = '1.0-SNAPSHOT'
-                from components.java
-                developers {
-                    developer {
-                        id = 'jmallas'
-                        name = 'Jorge Luis Malla Sanchez'
-                        email = 'jomasloja@gmail.com'
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -49,12 +27,13 @@ dependencies {
     compileOnly "org.hibernate:hibernate-core:${hibernateJpaVersion}"
     compileOnly "org.hibernate:hibernate-envers:3.6.4.Final"
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    compileOnly 'org.slf4j:slf4j-simple:1.7.26'
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testImplementation('org.junit.jupiter:junit-jupiter-api:5.2.0')
     testCompile('org.junit.jupiter:junit-jupiter-params:5.2.0')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.2.0')
     implementation "io.jsonwebtoken:jjwt:${jjwtVersion}"
-    testCompile 'org.mockito:mockito-core:2.+'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile('org.mockito:mockito-junit-jupiter:2.18.3')
 }
 test {
