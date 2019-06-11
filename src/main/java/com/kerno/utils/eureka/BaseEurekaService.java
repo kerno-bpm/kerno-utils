@@ -6,4 +6,6 @@ public interface BaseEurekaService {
     String getEndpointByName(InstanceInfoDto instanceInfo, String name);
 
     String getEndpointByExternalId(InstanceInfoDto instanceInfo, String externalId);
+
+    String getEndpointAll(InstanceInfoDto instanceInfo);
 }
