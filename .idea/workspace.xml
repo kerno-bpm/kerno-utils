@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25ee2e5f-a247-43d0-aed3-866f7b0b0467" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kerno/utils/eureka/BaseEurekaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/eureka/BaseEurekaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceSimple.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -63,65 +62,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoApiError.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceCrud.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="261">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/AbstractDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/AbstractExternalIdDto.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/eureka/InstanceInfoDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="58">
+              <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/eureka/BaseEurekaService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceSimple.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="87">
+              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/eureka/BaseEurekaConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1160">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -164,6 +133,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -201,6 +171,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoApiError.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/AbstractExternalIdDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/eureka/BaseEurekaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoSeviceExternalId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceFindAll.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceAdd.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceById.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoSeviceByExternalId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceAddById.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceAddByExternalId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceCrud.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceSimple.java" />
       </list>
     </option>
   </component>
@@ -222,8 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -270,24 +249,6 @@
               <item name="kerno-utils" type="b2602c69:ProjectViewProjectNode" />
               <item name="kerno-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kerno-utils" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kerno-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kerno-utils" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kerno-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -318,6 +279,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,12 +302,13 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.kerno.utils.common" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kerno.utils.common" />
       <recent name="com.kerno.utils.encrypt" />
       <recent name="com.kerno.utils.jwt" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/kerno/utils/dto" />
@@ -499,6 +463,8 @@
       <workItem from="1559886017643" duration="632000" />
       <workItem from="1560221985953" duration="386000" />
       <workItem from="1560224455883" duration="125000" />
+      <workItem from="1563044716571" duration="1720000" />
+      <workItem from="1563055091328" duration="3121000" />
     </task>
     <servers />
   </component>
@@ -535,13 +501,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43603000" />
+    <option name="totallyTimeSpent" value="48671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="134" y="35" width="3066" height="1765" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3398254" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35963735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -669,13 +635,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/bf6544529adb99bb5b81454f44ab69f5935be4af/junit-platform-commons-1.2.0-sources.jar!/org/junit/platform/commons/util/ReflectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="512" selection-start-line="512" selection-end-line="512" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/bf6544529adb99bb5b81454f44ab69f5935be4af/junit-platform-commons-1.2.0-sources.jar!/org/junit/platform/commons/util/ReflectionUtils.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.26.0/4bc5d227f2893dd40c65a70a98b596cb13f7acf3/mockito-core-2.26.0-sources.jar!/org/mockito/internal/invocation/RealMethod.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/JwtAuthenticationConfig.java" />
     <entry file="file://$PROJECT_DIR$/lombok.config">
@@ -692,9 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -707,20 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/exception/CareerConflictException.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/exception/InstanceInfoNotFoundException.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-envers/3.6.4.Final/2ab958a30f75684bbbd2255e21af5b0c2e8bbbf0/hibernate-envers-3.6.4.Final-sources.jar!/org/hibernate/envers/DefaultRevisionEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.0.Final/128bc9abe5471c31890b014ed6579b292f652a5b/hibernate-jpa-2.0-api-1.0.0.Final-sources.jar!/javax/persistence/GeneratedValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1247">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-envers/3.6.4.Final/2ab958a30f75684bbbd2255e21af5b0c2e8bbbf0/hibernate-envers-3.6.4.Final-sources.jar!/org/hibernate/envers/DefaultRevisionEntity.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.0.Final/128bc9abe5471c31890b014ed6579b292f652a5b/hibernate-jpa-2.0-api-1.0.0.Final-sources.jar!/javax/persistence/GeneratedValue.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/domain/AbstractExternalIdentifiableEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -749,20 +694,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-module-junit4/1.7.4/2cb09ea43bf798e98e0fd70a3ccfe532c5e12829/powermock-module-junit4-1.7.4-sources.jar!/org/powermock/modules/junit4/internal/impl/PowerMockJUnit44RunnerDelegateImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="330" selection-start-line="330" selection-end-line="330" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-api-mockito2/1.7.4/4f74c9043aeb06e75b663228335299e2979344d3/powermock-api-mockito2-1.7.4-sources.jar!/org/powermock/api/mockito/PowerMockito.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-517">
-          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-module-junit4/1.7.4/2cb09ea43bf798e98e0fd70a3ccfe532c5e12829/powermock-module-junit4-1.7.4-sources.jar!/org/powermock/modules/junit4/internal/impl/PowerMockJUnit44RunnerDelegateImpl.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-api-mockito2/1.7.4/4f74c9043aeb06e75b663228335299e2979344d3/powermock-api-mockito2-1.7.4-sources.jar!/org/powermock/api/mockito/PowerMockito.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -777,16 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/ValidatorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -840,6 +763,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/eureka/BaseEurekaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/ValidatorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/eureka/BaseEurekaConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -851,6 +791,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1160">
           <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceFindAll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceAddById.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceById.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoSeviceByExternalId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -881,10 +852,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/eureka/BaseEurekaService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceAddByExternalId.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="58">
+          <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceCrud.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoServiceSimple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
         </state>
       </provider>
     </entry>
