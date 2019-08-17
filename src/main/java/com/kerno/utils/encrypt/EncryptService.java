@@ -1,28 +1,26 @@
 package com.kerno.utils.encrypt;
 
-import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Base64;
-import java.util.logging.Logger;
 
-@Data
+@Slf4j
 public class EncryptService {
-    public String ALGORITHM = "SHA-512";
-    public int ITERATIONS = 64000;
-    public int SALT_SIZE = 64;
-    private final static Logger LOGGER = Logger.getLogger("EncryptService");
+    public static String ALGORITHM = "SHA-512";
+    public static int ITERATIONS = 64000;
+    public static int SALT_SIZE = 64;
 
-    public String encryptPassword(String password) {
+    public static String encryptPassword(String password) {
         byte[] salt = generateSalt();
         byte[] hash = calculateHash(password, salt);
         return Base64.getEncoder().encodeToString(salt).concat(":").concat(Base64.getEncoder().encodeToString(hash));
     }
 
-    protected byte[] calculateHash(String password, byte[] salt) {
+    public static byte[] calculateHash(String password, byte[] salt) {
         byte[] hash = new byte[64];
         try {
             MessageDigest md = MessageDigest.getInstance(ALGORITHM);
@@ -36,24 +34,24 @@ public class EncryptService {
             }
 
         } catch (NoSuchAlgorithmException ex) {
-            LOGGER.info(ex.getMessage());
+            log.info(ex.getMessage());
         }
         return hash;
     }
 
-    protected byte[] generateSalt() {
+    public static byte[] generateSalt() {
         SecureRandom random = new SecureRandom();
         byte[] salt = new byte[SALT_SIZE];
         random.nextBytes(salt);
         return salt;
     }
 
-    public boolean verifyPassword(String password, byte[] originalHash, byte[] salt) {
+    public static boolean verifyPassword(String password, byte[] originalHash, byte[] salt) {
         byte[] comparisonHash = calculateHash(password, salt);
         return comparePasswords(originalHash, comparisonHash);
     }
 
-    public boolean comparePasswords(byte[] originalHash, byte[] comparisonHash) {
+    private static boolean comparePasswords(byte[] originalHash, byte[] comparisonHash) {
         int diff = originalHash.length ^ comparisonHash.length;
         for (int i = 0; i < originalHash.length && i < comparisonHash.length; i++) {
             diff |= originalHash[i] ^ comparisonHash[i];
@@ -61,11 +59,11 @@ public class EncryptService {
         return diff == 0;
     }
 
-    public boolean isPasswordCorrect(String oldPassword, String passwordUpdate) {
+    public static boolean isPasswordCorrect(String oldPassword, String passwordUpdate) {
         String saltPart = oldPassword.split(":")[0];
         String hashPart = oldPassword.split(":")[1];
         byte[] salt = Base64.getDecoder().decode(saltPart);
         byte[] hash = Base64.getDecoder().decode(hashPart);
-        return this.verifyPassword(passwordUpdate, hash, salt);
+        return verifyPassword(passwordUpdate, hash, salt);
     }
 }
