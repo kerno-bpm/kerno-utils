@@ -7,5 +7,5 @@ public interface KernoQueryService<T, ID> {
 
     List<T> findAll();
 
-    <S extends T> S buildEntity(Object ...params);
+    <S extends T> S buildEntity(Object entityToBuild);
 }
