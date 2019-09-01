@@ -11,5 +11,6 @@ public class UserDetailsJwt {
     private String username;
     private Date expiration;
     private String accountId;
+    private boolean superUser;
     Collection<String> authorities;
 }
