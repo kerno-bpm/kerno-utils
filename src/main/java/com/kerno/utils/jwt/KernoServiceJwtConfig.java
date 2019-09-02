@@ -6,8 +6,6 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 public class KernoServiceJwtConfig {
@@ -18,8 +16,7 @@ public class KernoServiceJwtConfig {
                 .setSigningKey(key.getBytes())
                 .parseClaimsJws(token)
                 .getBody();
-        UserDetailsJwt userDetails = (UserDetailsJwt) claims.get(KERNO_USER_CLAIM);
-        return userDetails;
+        return claims.get(KERNO_USER_CLAIM, UserDetailsJwt.class);
     }
 
     public static String createJwtToken(UserDetailsJwt user, JwtConfig jwtConfig) {
