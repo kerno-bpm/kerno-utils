@@ -11,15 +11,14 @@ import java.util.stream.Collectors;
 
 @Slf4j
 public class KernoServiceJwtConfig {
+    private final static String KERNO_USER_CLAIM = "KERNO_USER";
 
     public static UserDetailsJwt getUserDetails(String token, String key) {
         Claims claims = Jwts.parser()
                 .setSigningKey(key.getBytes())
                 .parseClaimsJws(token)
                 .getBody();
-        UserDetailsJwt userDetails = new UserDetailsJwt();
-        userDetails.setUsername(claims.getSubject());
-        userDetails.setAuthorities((List<String>) claims.get("authorities"));
+        UserDetailsJwt userDetails = (UserDetailsJwt) claims.get(KERNO_USER_CLAIM);
         return userDetails;
     }
 
@@ -33,9 +32,7 @@ public class KernoServiceJwtConfig {
                 .builder()
                 .setId(user.getExternalId())
                 .setSubject(user.getUsername())
-                .claim("authorities",
-                        user.authorities.stream()
-                                .collect(Collectors.toList()))
+                .claim(KERNO_USER_CLAIM, user)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(user.getExpiration())
                 .signWith(SignatureAlgorithm.HS512,
