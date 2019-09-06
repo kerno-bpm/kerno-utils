@@ -8,5 +8,4 @@ import java.util.Collection;
 public class CustomClaim {
     private String accountId;
     private boolean isSuperUser;
-    Collection<String> authorities;
 }
