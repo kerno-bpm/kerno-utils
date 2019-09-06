@@ -2,7 +2,6 @@ package com.kerno.utils.jwt;
 
 import lombok.Data;
 
-import java.util.Collection;
 import java.util.Date;
 
 @Data
