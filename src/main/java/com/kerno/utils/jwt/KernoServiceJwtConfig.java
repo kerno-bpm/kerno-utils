@@ -23,7 +23,7 @@ public class KernoServiceJwtConfig {
         userJwt.setExpiration(claims.getExpiration());
         userJwt.setJti(claims.getId());
         userJwt.setSubject(claims.getSubject());
-        userJwt.setCustomClaim(dozerBeanMapper.map(claims.get(KERNO_USER_CLAIM),CustomClaim.class));
+        userJwt.setCustomClaim(dozerBeanMapper.map(claims.get(KERNO_USER_CLAIM), CustomClaim.class));
         return userJwt;
     }
 
@@ -33,7 +33,7 @@ public class KernoServiceJwtConfig {
             return null;
         }
 
-        String data = Jwts
+        return Jwts
                 .builder()
                 .setId(user.getJti())
                 .setSubject(user.getSubject())
@@ -42,6 +42,5 @@ public class KernoServiceJwtConfig {
                 .setExpiration(user.getExpiration())
                 .signWith(SignatureAlgorithm.HS512,
                         jwtConfig.getSecret().getBytes()).compact();
-        return data;
     }
 }
