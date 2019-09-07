@@ -9,5 +9,4 @@ import java.util.Collection;
 public class CustomClaim {
     private String accountId;
     private boolean isSuperUser;
-    private Collection<String> authorities= new ArrayList<>();
 }

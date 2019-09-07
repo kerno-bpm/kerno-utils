@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Slf4j
 public class KernoServiceJwtConfig {
-    private final static String KERNO_USER_CLAIM = "KERNO_USER";
+    private final static String KERNO_CUSTOM_CLAIM = "KERNO_CUSTOM_CLAIM";
 
     public static UserJwt getUserDetails(String token, String key) {
         DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
@@ -23,7 +23,7 @@ public class KernoServiceJwtConfig {
         userJwt.setExpiration(claims.getExpiration());
         userJwt.setJti(claims.getId());
         userJwt.setSubject(claims.getSubject());
-        userJwt.setCustomClaim(dozerBeanMapper.map(claims.get(KERNO_USER_CLAIM), CustomClaim.class));
+        userJwt.setCustomClaim(dozerBeanMapper.map(claims.get(KERNO_CUSTOM_CLAIM), CustomClaim.class));
         return userJwt;
     }
 
@@ -37,7 +37,7 @@ public class KernoServiceJwtConfig {
                 .builder()
                 .setId(user.getJti())
                 .setSubject(user.getSubject())
-                .claim(KERNO_USER_CLAIM, user.getCustomClaim())
+                .claim(KERNO_CUSTOM_CLAIM, user.getCustomClaim())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(user.getExpiration())
                 .signWith(SignatureAlgorithm.HS512,
