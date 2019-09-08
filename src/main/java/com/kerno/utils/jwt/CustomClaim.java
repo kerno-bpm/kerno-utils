@@ -2,6 +2,7 @@ package com.kerno.utils.jwt;
 
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Data
