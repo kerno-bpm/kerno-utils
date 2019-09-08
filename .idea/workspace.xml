@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7509b804-73c0-4b8b-a2f3-66368011ac1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/CustomClaim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/CustomClaim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/UserJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/UserJwt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kerno/utils/cqrs/KernoBuildService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/cqrs/KernoBuildService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -41,14 +41,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/KernoServiceJwtConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+            <state relative-caret-position="195">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/cqrs/KernoBuildService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -65,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/UserJwt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="75">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -120,10 +129,10 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/cqrs/KernoCustomQueryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/cqrs/KernoQueryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/cqrs/KernoBuildService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/KernoServiceJwtConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/CustomClaim.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/UserJwt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/cqrs/KernoBuildService.java" />
       </list>
     </option>
   </component>
@@ -133,17 +142,17 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="925" />
+    <option name="height" value="922" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +207,15 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="cqrs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kerno-utils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kerno-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
               <item name="encrypt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -213,7 +231,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -253,17 +270,18 @@
       <workItem from="1565399948920" duration="605000" />
       <workItem from="1566061218912" duration="2402000" />
       <workItem from="1566267468667" duration="124000" />
+      <workItem from="1567983207272" duration="71000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6156000" />
+    <option name="totallyTimeSpent" value="6535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="23" width="1680" height="922" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2771673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2802198" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -324,6 +342,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/KernoServiceJwtConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/CustomClaim.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -333,7 +361,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/UserJwt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="75">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -348,13 +376,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/jwt/KernoServiceJwtConfig.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.9.1/4341772ad269e161a35d2d0ad66f4f6d2f5e79b9/jjwt-0.9.1-sources.jar!/io/jsonwebtoken/JwtBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="4710">
+          <caret line="330" column="46" selection-start-line="330" selection-start-column="41" selection-end-line="330" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/cqrs/KernoCommandService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/cqrs/KernoBuildService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
