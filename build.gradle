@@ -10,14 +10,14 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 plugins {
     id 'java'
     id 'jacoco'
     id 'org.springframework.boot' version '2.1.8.RELEASE'
-    id "com.github.dcendents.android-maven" version "2.1"
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'maven-publish'
 }
 
 
@@ -25,7 +25,6 @@ jacoco {
     toolVersion = "0.8.2"
 }
 
-apply plugin: 'io.spring.dependency-management'
 group 'com.kerno'
 version '1.0-SNAPSHOT'
 
@@ -39,6 +38,20 @@ ext {
 allprojects {
     repositories {
         maven { url "http://repo1.maven.org/maven2/" }
+    }
+}
+publishing {
+    publications {
+        myLibrary(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name = 'kerno-utils'
+            url = "file://${buildDir}/kerno-utils"
+        }
     }
 }
 
