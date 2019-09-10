@@ -16,7 +16,9 @@ plugins {
     id 'java'
     id 'jacoco'
     id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'maven-publish'
 }
+
 
 jacoco {
     toolVersion = "0.8.2"
@@ -36,6 +38,7 @@ ext {
 allprojects {
     repositories {
         maven { url "http://repo1.maven.org/maven2/" }
+        maven { url "https://jitpack.io" }
     }
 }
 
