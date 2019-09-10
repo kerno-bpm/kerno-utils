@@ -1,12 +1,28 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.5.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
 plugins {
     id 'java'
     id 'jacoco'
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
 }
 
 jacoco {
     toolVersion = "0.8.2"
 }
 
+apply plugin: 'io.spring.dependency-management'
 group 'com.kerno'
 version '1.0-SNAPSHOT'
 
@@ -24,7 +40,8 @@ allprojects {
 }
 
 dependencies {
-    compileOnly "org.hibernate:hibernate-core:${hibernateJpaVersion}"
+    compileOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compileOnly 'org.springframework.boot:spring-boot-starter-web'
     compileOnly "org.hibernate:hibernate-envers:3.6.4.Final"
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     compileOnly 'org.slf4j:slf4j-simple:1.7.26'
