@@ -7,6 +7,6 @@ public class JwtConfig {
     private String url;
     private String header;
     private String prefix;
-    private int expiration;
+    private long expiration;
     private String secret;
 }
