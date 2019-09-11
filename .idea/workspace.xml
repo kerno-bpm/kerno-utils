@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7509b804-73c0-4b8b-a2f3-66368011ac1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoCommon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/CredentialsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/CredentialsDto.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -78,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoCommon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="80" column="62" selection-start-line="80" selection-start-column="62" selection-end-line="80" selection-end-column="62" />
+            <state relative-caret-position="237">
+              <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/CredentialsDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="270">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -171,8 +169,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/firebase/FirebaseService.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/CredentialsDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoCommon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/CredentialsDto.java" />
       </list>
     </option>
   </component>
@@ -333,18 +331,18 @@
       <workItem from="1568145375561" duration="1035000" />
       <workItem from="1568150975388" duration="4443000" />
       <workItem from="1568172718227" duration="2992000" />
-      <workItem from="1568208818974" duration="347000" />
+      <workItem from="1568208818974" duration="878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16467000" />
+    <option name="totallyTimeSpent" value="16998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="922" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31929183" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31929183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -361,7 +359,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.3283767" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3283767" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3283767" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" order="11" />
@@ -547,20 +545,20 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/exception/KernoConflictException.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/CredentialsDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoCommon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="80" column="62" selection-start-line="80" selection-start-column="62" selection-end-line="80" selection-end-column="62" />
+        <state relative-caret-position="237">
+          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/CredentialsDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

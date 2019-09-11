@@ -76,7 +76,7 @@ public class KernoCommon {
 
         return credentialsDto.getAccountId().equals(accountId);
     }
-    public HttpHeaders getHeaders(CredentialsDto credentialsDto) {
+    public static HttpHeaders getHeaders(CredentialsDto credentialsDto) {
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(credentialsDto.getBearerToken());
 
