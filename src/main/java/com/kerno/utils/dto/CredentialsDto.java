@@ -10,9 +10,10 @@ public class CredentialsDto {
     private String bearerToken;
     private boolean isSuperUser;
 
-    public CredentialsDto(String subject, String accountId, boolean isSuperUser) {
+    public CredentialsDto(String subject, String accountId, boolean isSuperUser, String bearerToken) {
         this.accountId = accountId;
         this.isSuperUser = isSuperUser;
         this.subject = subject;
+        this.bearerToken = bearerToken;
     }
 }
