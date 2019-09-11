@@ -19,12 +19,14 @@ ext {
 }
 allprojects {
     repositories {
+        mavenCentral()
         maven { url "http://repo1.maven.org/maven2/" }
     }
 }
 
 dependencies {
-    compile group: 'org.springframework', name: 'spring-web', version: '5.1.9.RELEASE'
+    compileOnly group: 'org.springframework', name: 'spring-web', version: '5.1.9.RELEASE'
+    compileOnly group: 'org.springframework.security', name: 'spring-security-core', version: '5.1.6.RELEASE'
     compileOnly "org.hibernate:hibernate-core:${hibernateJpaVersion}"
     compileOnly "org.hibernate:hibernate-envers:3.6.4.Final"
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
