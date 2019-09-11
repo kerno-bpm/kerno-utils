@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7509b804-73c0-4b8b-a2f3-66368011ac1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/common/KernoUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/exception/KernoForbiddenException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/exception/KernoNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kerno/utils/dto/KernoConflictException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kerno/utils/exception/KernoConflictException.java" afterDir="false" />
-    </list>
+    <list default="true" id="7509b804-73c0-4b8b-a2f3-66368011ac1c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -328,18 +318,17 @@
       <workItem from="1568065649880" duration="20000" />
       <workItem from="1568145375561" duration="1035000" />
       <workItem from="1568150975388" duration="4443000" />
-      <workItem from="1568172718227" duration="1836000" />
+      <workItem from="1568172718227" duration="2143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14964000" />
+    <option name="totallyTimeSpent" value="15271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="922" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31562883" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31562883" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -356,7 +345,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.3283767" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3283767" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3283767" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" order="11" />
