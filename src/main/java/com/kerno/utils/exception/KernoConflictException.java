@@ -1,4 +1,4 @@
-package com.kerno.utils.dto;
+package com.kerno.utils.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
