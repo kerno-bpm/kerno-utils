@@ -12,10 +12,10 @@ import org.springframework.security.core.Authentication;
 import java.io.IOException;
 
 @Slf4j
-public class KernoUtils {
+public class KernoCommon {
 
 
-    private KernoUtils() {
+    private KernoCommon() {
     }
 
     public static final ObjectMapper mapper = new ObjectMapper();
