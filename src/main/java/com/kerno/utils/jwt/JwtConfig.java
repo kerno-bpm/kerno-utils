@@ -1,12 +1,10 @@
 package com.kerno.utils.jwt;
 
 import lombok.Data;
-import lombok.ToString;
 import org.springframework.beans.factory.annotation.Value;
 
 
 @Data
-@ToString
 public class JwtConfig {
     @Value("${kerno.jwt.uri:/kerno-security/auth/**}")
     private String url;
