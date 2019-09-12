@@ -76,14 +76,15 @@ public class KernoCommon {
 
         return credentialsDto.getAccountId().equals(accountId);
     }
+
     public static HttpHeaders getHeaders(CredentialsDto credentialsDto) {
         HttpHeaders headers = new HttpHeaders();
-        headers.setBearerAuth(credentialsDto.getBearerToken());
 
         if (credentialsDto != null) {
             headers.set("accountId", credentialsDto.getAccountId());
             headers.set("superUser", String.valueOf(true));
             headers.set("subject", credentialsDto.getSubject());
+            headers.setBearerAuth(credentialsDto.getBearerToken());
         }
         return headers;
     }
