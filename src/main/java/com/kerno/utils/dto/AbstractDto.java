@@ -10,5 +10,9 @@ public class AbstractDto implements Serializable {
     private Long id;
     private boolean active;
     @JsonIgnore
-    private boolean isBuilt = false;
+    private boolean isBuilt;
+
+    public AbstractDto() {
+        isBuilt = false;
+    }
 }
