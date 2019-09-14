@@ -16,4 +16,7 @@ public class CredentialsDto {
         this.subject = subject;
         this.bearerToken = bearerToken;
     }
+
+    public CredentialsDto() {
+    }
 }
