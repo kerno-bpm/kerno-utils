@@ -5,5 +5,5 @@ public interface KernoCommandService<T, ID> {
 
     <S extends T> S editEntity(T data, ID id);
 
-    <S extends T> S deleteEntity(T data, ID id);
+    void deleteEntity(ID id);
 }
