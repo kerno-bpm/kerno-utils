@@ -1,6 +1,5 @@
 package com.kerno.utils.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -9,10 +8,8 @@ import java.io.Serializable;
 public class AbstractDto implements Serializable {
     private Long id;
     private boolean active;
-    @JsonIgnore
-    private boolean isBuilt;
 
     public AbstractDto() {
-        isBuilt = false;
+        active = true;
     }
 }
