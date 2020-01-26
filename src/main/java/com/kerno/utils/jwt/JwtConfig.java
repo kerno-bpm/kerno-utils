@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 @Data
 public class JwtConfig {
-    @Value("${kerno.jwt.uri:/kerno-security/auth/**}")
+    @Value("${kerno.jwt.uri:/kerno-base/auth/**}")
     private String url;
     @Value("${kerno.jwt.header:Authorization}")
     private String header;
