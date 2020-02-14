@@ -84,7 +84,6 @@ public class KernoCommon {
             headers.set("accountId", credentialsDto.getAccountId() != null ? credentialsDto.getAccountId() : "kernoaccount");
             headers.set("superUser", String.valueOf(true));
             headers.set("subject", credentialsDto.getSubject() != null ? credentialsDto.getSubject() : "kernoUser");
-            headers.setBearerAuth(credentialsDto.getBearerToken() != null ? credentialsDto.getBearerToken() : "kernoSecret");
         }
         return headers;
     }
