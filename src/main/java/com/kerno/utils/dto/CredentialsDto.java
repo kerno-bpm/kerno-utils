@@ -7,14 +7,12 @@ import lombok.EqualsAndHashCode;
 public class CredentialsDto {
     private String subject;
     private String accountId;
-    private String bearerToken;
     private boolean isSuperUser;
 
-    public CredentialsDto(String subject, String accountId, boolean isSuperUser, String bearerToken) {
+    public CredentialsDto(String subject, String accountId, boolean isSuperUser) {
         this.accountId = accountId;
         this.isSuperUser = isSuperUser;
         this.subject = subject;
-        this.bearerToken = bearerToken;
     }
 
     public CredentialsDto() {
