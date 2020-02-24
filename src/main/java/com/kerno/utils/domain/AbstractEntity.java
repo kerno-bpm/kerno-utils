@@ -22,5 +22,6 @@ public abstract class AbstractEntity {
     @PrePersist
     public void createAt() {
         created = new Timestamp(System.currentTimeMillis());
+        active = true;
     }
 }
