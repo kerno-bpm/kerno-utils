@@ -9,6 +9,7 @@ public class KernoPageable {
     private int pageNumber;
     private int pageSize;
     private String sort;
+    private String filter;
 
     public KernoPageable() {
     }
@@ -18,9 +19,9 @@ public class KernoPageable {
         this.pageSize = pageSize;
     }
 
-    public KernoPageable(int pageNumber, int pageSize, String sort) {
+    public KernoPageable(int pageNumber, int pageSize, String filter) {
         this.pageNumber = pageNumber;
         this.pageSize = pageSize;
-        this.sort = sort;
+        this.filter = filter;
     }
 }
