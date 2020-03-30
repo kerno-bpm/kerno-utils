@@ -9,9 +9,9 @@ public class SpecSearchCriteria {
     private Object value;
     private boolean orPredicate;
 
-    public SpecSearchCriteria(final String orPredicate, final String key, final SearchOperation operation, final Object value) {
+    public SpecSearchCriteria(final boolean orPredicate, final String key, final SearchOperation operation, final Object value) {
         super();
-        this.orPredicate = orPredicate != null && orPredicate.equals(SearchOperation.OR_PREDICATE_FLAG);
+        this.orPredicate = orPredicate;
         this.key = key;
         this.operation = operation;
         this.value = value;

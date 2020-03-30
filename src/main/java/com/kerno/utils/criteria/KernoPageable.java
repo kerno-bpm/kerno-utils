@@ -1,4 +1,4 @@
-package com.kerno.utils.cqrs;
+package com.kerno.utils.criteria;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,8 +8,9 @@ import lombok.Setter;
 public class KernoPageable {
     private int pageNumber;
     private int pageSize;
-    private String sort;
     private String filter;
+    private String sort;
+    private boolean orPredicateFlag;
 
     public KernoPageable() {
     }
@@ -19,9 +20,11 @@ public class KernoPageable {
         this.pageSize = pageSize;
     }
 
-    public KernoPageable(int pageNumber, int pageSize, String filter) {
+    public KernoPageable(int pageNumber, int pageSize, String filter, boolean orPredicateFlag, String sort) {
         this.pageNumber = pageNumber;
         this.pageSize = pageSize;
         this.filter = filter;
+        this.orPredicateFlag = orPredicateFlag;
+        this.sort = sort;
     }
 }
