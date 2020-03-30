@@ -3,7 +3,7 @@ package com.kerno.utils.criteria;
 public enum SearchOperation {
     EQUALITY, NEGATION, GREATER_THAN, LESS_THAN, LIKE, STARTS_WITH, ENDS_WITH, CONTAINS;
 
-    protected static final String[] SIMPLE_OPERATION_SET = {":", "!", ">", "<", "~"};
+    public static final String[] SIMPLE_OPERATION_SET = {":", "!", ">", "<", "~"};
 
     public static final String OR_PREDICATE_FLAG = "'";
 
