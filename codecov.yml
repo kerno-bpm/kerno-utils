@@ -1,2 +1,21 @@
 codecov:
   token: 0dc449fb-a091-4dd0-8c28-c45146412f34
+  coverage:
+    status:
+      project:
+        default:
+          # basic
+          target: auto
+          threshold: 0%
+          base: auto
+          flags:
+            - unit
+          paths:
+            - "src"
+          # advanced
+          branches:
+            - master
+          if_not_found: success
+          if_ci_failed: error
+          informational: False
+          only_pulls: false
