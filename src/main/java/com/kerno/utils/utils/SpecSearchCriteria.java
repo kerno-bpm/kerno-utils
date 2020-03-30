@@ -1,4 +1,4 @@
-package com.kerno.utils.criteria;
+package com.kerno.utils.utils;
 
 import lombok.Data;
 
