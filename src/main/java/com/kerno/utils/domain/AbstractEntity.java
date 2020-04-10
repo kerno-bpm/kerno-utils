@@ -14,7 +14,7 @@ public abstract class AbstractEntity {
     @Column(updatable = false)
     private Timestamp created;
     @Version
-    @Column(updatable = true)
+    @Column
     private Timestamp updated;
     @Column(name = "is_active", nullable = false)
     private Boolean active;
