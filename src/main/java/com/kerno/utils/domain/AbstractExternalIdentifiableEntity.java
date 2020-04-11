@@ -10,13 +10,13 @@ import java.util.UUID;
 @Data
 @MappedSuperclass
 @ToString(callSuper = true)
-public abstract class AbstractEntityUUID extends AbstractEntity {
-    protected UUID externalId;
+public abstract class AbstractExternalIdentifiableEntity extends AbstractEntity {
+    protected String externalId;
 
     @PrePersist
     public void initializeExternalId() {
         if (externalId == null) {
-            externalId = UUID.randomUUID();
+            externalId = UUID.randomUUID().toString();
         }
     }
 }
