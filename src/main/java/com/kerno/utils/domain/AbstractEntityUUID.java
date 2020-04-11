@@ -11,12 +11,12 @@ import java.util.UUID;
 @MappedSuperclass
 @ToString(callSuper = true)
 public abstract class AbstractEntityUUID extends AbstractEntity {
-    protected UUID uuid;
+    protected UUID externalId;
 
     @PrePersist
     public void initializeExternalId() {
-        if (uuid == null) {
-            uuid = UUID.randomUUID();
+        if (externalId == null) {
+            externalId = UUID.randomUUID();
         }
     }
 }
