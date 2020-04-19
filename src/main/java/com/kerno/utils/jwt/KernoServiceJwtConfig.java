@@ -7,10 +7,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.dozer.DozerBeanMapper;
 
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class KernoServiceJwtConfig {
-    private final static String KERNO_CUSTOM_CLAIM = "KERNO_CUSTOM_CLAIM";
+    private KernoServiceJwtConfig() {
+
+    }
 
     public static UserJwt getUserDetails(String token, String key) {
         DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
@@ -23,7 +27,9 @@ public class KernoServiceJwtConfig {
         userJwt.setExpiration(claims.getExpiration());
         userJwt.setJti(claims.getId());
         userJwt.setSubject(claims.getSubject());
-        userJwt.setCustomClaim(dozerBeanMapper.map(claims.get(KERNO_CUSTOM_CLAIM), CustomClaim.class));
+        userJwt.setCustomClaim(dozerBeanMapper.map(claims.get("KERNO_CUSTOM_CLAIM"), CustomClaim.class));
+        List<Authority> authorities = (List<Authority>) claims.get("Authorities");
+        userJwt.setAuthorities(authorities);
         return userJwt;
     }
 
@@ -32,12 +38,15 @@ public class KernoServiceJwtConfig {
             log.error("the user not exists {}", user.getSubject());
             return null;
         }
-
+        final String authorities = user.getAuthorities().stream()
+                .map(Authority::getName)
+                .collect(Collectors.joining(","));
         return Jwts
                 .builder()
                 .setId(user.getJti())
                 .setSubject(user.getSubject())
-                .claim(KERNO_CUSTOM_CLAIM, user.getCustomClaim())
+                .claim("KERNO_CUSTOM_CLAIM", user.getCustomClaim())
+                .claim("Authorities", authorities)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(user.getExpiration())
                 .signWith(SignatureAlgorithm.HS512,
