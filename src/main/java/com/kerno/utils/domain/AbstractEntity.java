@@ -11,13 +11,13 @@ public abstract class AbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "is_active", nullable = false)
+    private Boolean active;
     @Column(updatable = false)
     private Timestamp created;
     @Version
     @Column
     private Timestamp updated;
-    @Column(name = "is_active", nullable = false)
-    private Boolean active;
 
     @PrePersist
     public void createAt() {
