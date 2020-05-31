@@ -7,10 +7,7 @@ import java.sql.Timestamp;
 
 @Data
 @MappedSuperclass
-public abstract class AbstractEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public abstract class AbstractEntity extends AbstractId {
     @Column(name = "is_active", nullable = false)
     private Boolean active;
     @Column(updatable = false)
