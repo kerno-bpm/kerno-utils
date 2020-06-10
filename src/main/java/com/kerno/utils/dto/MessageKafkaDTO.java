@@ -7,12 +7,12 @@ import java.sql.Timestamp;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class MessageKafkaDto<T> {
+public class MessageKafkaDTO<T> {
     private Timestamp created;
     private String user;
     private T data;
 
-    public MessageKafkaDto() {
+    public MessageKafkaDTO() {
         created = new Timestamp(System.currentTimeMillis());
     }
 }
