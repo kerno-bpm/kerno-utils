@@ -1,7 +1,7 @@
 package com.kerno.utils.common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kerno.utils.dto.CredentialsDto;
+import com.kerno.utils.dto.CredentialsDTO;
 import com.kerno.utils.exception.KernoConflictException;
 import com.kerno.utils.exception.KernoForbiddenException;
 import lombok.extern.slf4j.Slf4j;
@@ -56,14 +56,14 @@ public class KernoCommon {
         return response.getBody();
     }
 
-    public static CredentialsDto getCredentials(Authentication authentication) {
+    public static CredentialsDTO getCredentials(Authentication authentication) {
         if (authentication.isAuthenticated()) {
-            return (CredentialsDto) authentication.getCredentials();
+            return (CredentialsDTO) authentication.getCredentials();
         }
         return null;
     }
 
-    public static boolean canFetch(String accountId, CredentialsDto credentialsDto, String object) {
+    public static boolean canFetch(String accountId, CredentialsDTO credentialsDto, String object) {
         if (credentialsDto == null) {
             String messageException = String.format("The %s cannot be obtained because the user is not logged", object);
             log.error(messageException);
@@ -77,7 +77,7 @@ public class KernoCommon {
         return credentialsDto.getAccountId().equals(accountId);
     }
 
-    public static HttpHeaders getHeaders(CredentialsDto credentialsDto) {
+    public static HttpHeaders getHeaders(CredentialsDTO credentialsDto) {
         HttpHeaders headers = new HttpHeaders();
 
         if (credentialsDto != null) {

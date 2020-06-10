@@ -3,6 +3,6 @@ package com.kerno.utils.dto;
 import lombok.Data;
 
 @Data
-public class AbstractIdDto {
+public class AbstractIdDTO {
     private Long id;
 }

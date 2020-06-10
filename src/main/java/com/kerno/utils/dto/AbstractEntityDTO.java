@@ -5,12 +5,12 @@ import lombok.Data;
 import java.sql.Timestamp;
 
 @Data
-public class AbstractEntityDto extends AbstractIdDto {
+public class AbstractEntityDTO extends AbstractIdDTO {
     private boolean active;
     private Timestamp created;
     private Timestamp updated;
 
-    public AbstractEntityDto() {
+    public AbstractEntityDTO() {
         active = true;
     }
 }
