@@ -1,16 +1,18 @@
 package com.kerno.utils.domain;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import java.util.UUID;
 
-@Data
+@Getter
+@Setter
 @MappedSuperclass
 @ToString(callSuper = true)
-public abstract class AbstractExternalIdentifiableEntity extends AbstractEntity {
+public class AbstractExternalIdentifiableEntity extends AbstractEntity {
     protected String externalId;
 
     @PrePersist
@@ -19,4 +21,5 @@ public abstract class AbstractExternalIdentifiableEntity extends AbstractEntity 
             externalId = UUID.randomUUID().toString();
         }
     }
+
 }
