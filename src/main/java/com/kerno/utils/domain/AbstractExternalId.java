@@ -10,4 +10,5 @@ import javax.persistence.MappedSuperclass;
 @ToString(callSuper = true)
 public class AbstractExternalId extends AbstractId {
     protected String externalId;
+
 }

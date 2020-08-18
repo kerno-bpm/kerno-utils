@@ -1,29 +1,35 @@
 package com.kerno.utils.domain;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.Version;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
-@Data
+/**
+ * This entity allows knowing the date when a change is made in a record
+ */
+@Getter
+@Setter
 @MappedSuperclass
 @ToString(callSuper = true)
-public abstract class AbstractEntity extends AbstractId {
+public class AbstractEntity extends AbstractId {
     @Column(name = "is_active", nullable = false)
     private Boolean active;
     @Column(updatable = false)
-    private Timestamp created;
+    private LocalDateTime created;
     @Version
     @Column
-    private Timestamp updated;
+    private LocalDateTime updated;
 
     @PrePersist
     public void createAt() {
-        created = new Timestamp(System.currentTimeMillis());
+        created = LocalDateTime.now();
         active = true;
     }
+
 }
