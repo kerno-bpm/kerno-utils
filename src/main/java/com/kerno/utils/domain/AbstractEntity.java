@@ -1,5 +1,6 @@
 package com.kerno.utils.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -21,9 +22,11 @@ public class AbstractEntity extends AbstractId {
     @Column(name = "is_active", nullable = false)
     private Boolean active;
     @Column(updatable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDateTime created;
     @Version
     @Column
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDateTime updated;
 
     @PrePersist
