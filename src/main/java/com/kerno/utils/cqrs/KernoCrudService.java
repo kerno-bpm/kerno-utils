@@ -22,7 +22,7 @@ public interface KernoCrudService<E, ID, T> {
      * @param id
      * @return
      */
-    <S> S findBy(ID id);
+    <S> S findByIdentifiable(ID id);
 
     /**
      * @param id
