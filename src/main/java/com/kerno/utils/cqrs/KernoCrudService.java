@@ -9,20 +9,20 @@ package com.kerno.utils.cqrs;
  */
 public interface KernoCrudService<E, ID, T> {
     /**
-     * Allows save
-     *
-     * @param data
-     * @return
-     */
-    E save(T data);
-
-    /**
      * Allows get a DTO preference by identifier
      *
      * @param id
      * @return
      */
     <S> S findByIdentifiable(ID id);
+
+    /**
+     * Allows save
+     *
+     * @param data
+     * @return
+     */
+    E save(T data);
 
     /**
      * @param id
