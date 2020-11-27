@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
+import org.dozer.DozerBeanMapper;
 
 import java.util.Date;
 
@@ -19,8 +20,8 @@ public class KernoServiceJwtConfig {
                 .setSigningKey(key.getBytes())
                 .parseClaimsJws(token)
                 .getBody();
-
-        CustomClaim customClaim = (CustomClaim) claims.get("KERNO_CUSTOM_CLAIM");
+        DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+        CustomClaim customClaim = dozerBeanMapper.map(claims.get("KERNO_CUSTOM_CLAIM"), CustomClaim.class);
         UserJwt userJwt = new UserJwt();
         userJwt.setExpiration(claims.getExpiration());
         userJwt.setJti(claims.getId());

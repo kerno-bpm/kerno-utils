@@ -30,6 +30,7 @@ dependencies {
     compileOnly "org.hibernate:hibernate-core:${hibernateJpaVersion}"
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     compileOnly 'org.slf4j:slf4j-simple:1.7.26'
+    compileOnly 'net.sf.dozer:dozer:5.5.1'
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     implementation "io.jsonwebtoken:jjwt:${jjwtVersion}"
     testCompile group: 'junit', name: 'junit', version: '4.12'
